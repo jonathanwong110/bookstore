@@ -10,14 +10,16 @@ class Books extends Component {
     render() {
 
         let { books } = this.props
-        console.log('this.props', this.props)
 
         return (
-            
-            books.map (book => {
-                return <Book key={book.id} book={book} />
-            })
+            <div>
+                {books.map(book => {
+                    return <Book id={book.id} book={book} />
+                })
+                }
+            </div>
         )
+
     }
 
 }

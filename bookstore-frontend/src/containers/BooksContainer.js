@@ -8,7 +8,7 @@ class BooksContainer extends Component {
     render() {
         return (
             <div>
-                <Books loadBooks={this.props.loadBooks}/>
+                <Books loadBooks={this.props.loadBooks} books={this.props.books}/>
             </div>
         )
     }
