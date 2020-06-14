@@ -24,9 +24,9 @@ export default function Cart(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {cart.map(book => {
+                    {cart.map(cartBook => {
                         return (
-                        <CartBook key={book[0]} cartBook={book}/>
+                        <CartBook key={cartBook[0]} cartBook={cartBook}/>
                                 )
                             }
                         )

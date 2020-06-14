@@ -1,13 +1,14 @@
-import { addToCart } from "../actions/cartActions"
+import { cartActionTypes } from "../actions/cartActions"
+import { addBookToCart } from '../abilities/cartAbilities'
 
 export default function manageCart(state = {
     cartBooks: []
 }, action) {
     switch (action.type) {
-        case ADD_TO_CART:
+        case cartActionTypes.ADD_TO_CART:
             return {
                 ...state,
-                cartBooks: addToCart(state.cartBooks, action.payload)
+                cartBooks: addBookToCart(state.cartBooks, action.payload)
             }
         default:
             return state

@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap'
 export default function CartBook(props) {
 
     const { cartBook } = props
+    console.log('cartBook', cartBook)
 
     return (
         <tr key={cartBook[0]}>

@@ -53,8 +53,8 @@ class Books extends Component {
                     <Row>
                         {books.map(book => {
                             return this.props.filterBy === "" || book.category === this.props.filterBy ?
-                                <Col key={book.id} xs="2" md="2">
-                                    <Book key={book.id} book={book} />
+                                <Col key={book.id} xs="3" md="3">
+                                    <Book key={book.id} book={book} addToCart={this.props.addToCart} />
                                 </Col> : null
                         }
                         )}

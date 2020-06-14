@@ -25,7 +25,7 @@ class BooksContainer extends Component {
         return (
             <Container>
                 <SideNav filterBy={this.filterBy}/>
-                <Books filterBy={this.state.filterBy} loadBooks={this.props.loadBooks} books={this.props.books}/>
+                <Books filterBy={this.state.filterBy} loadBooks={this.props.loadBooks} books={this.props.books} addToCart={this.props.addToCart}/>
             </Container>
         )
     }
