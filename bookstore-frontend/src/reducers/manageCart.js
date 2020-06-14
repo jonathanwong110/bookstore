@@ -22,6 +22,11 @@ export default function manageCart(state = {
                     (cartBook) => cartBook.id !== action.payload.id
                 ),
             };
+        case cartActionTypes.CLEAR_CART:
+            return {
+                ...state,
+                cartBooks: [],
+            };
         default:
             return state
     }

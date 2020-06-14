@@ -15,11 +15,11 @@ export const removeFromCart = (book) => {
 export const clearBookFromCart = (book) => ({
     type: cartActionTypes.CLEAR_BOOK_FROM_CART,
     payload: book
-  });
-  
-  export const clearCart = () => ({
+});
+
+export const clearCart = () => ({
     type: cartActionTypes.CLEAR_CART
-  });
+});
 
 
 export const cartActionTypes = {

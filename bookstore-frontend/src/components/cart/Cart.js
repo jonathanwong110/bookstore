@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar, Table } from 'react-bootstrap';
+import { Navbar, Table, Button } from 'react-bootstrap';
 import CartBook from './CartBook'
 
 export default function Cart(props) {
 
     const { cart } = props
-    const arrSum = arr => arr.reduce((a,b) => a + b, 0)
+    const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 
     return (
         <>
@@ -28,7 +28,6 @@ export default function Cart(props) {
                 </thead>
                 <tbody>
                     {cart.map(cartBook => {
-                        // debugger
                         return (
                             <CartBook key={cartBook.id} cartBook={cartBook} addToCart={props.addToCart} removeFromCart={props.removeFromCart} clearBookFromCart={props.clearBookFromCart} />
                         )
@@ -37,8 +36,13 @@ export default function Cart(props) {
                     }
                 </tbody>
             </Table>
+            <br></br>
+            <br></br>
+            <Button variant="danger" size="sm" className="clear-cart-button" onClick={() => props.clearCart()}>
+                Clear Cart
+            </Button>
             <div className="cart-total">
-                Total: ${arrSum(props.cart.map(cartBook => cartBook.price*cartBook.quantity))}.00
+                Total: ${arrSum(props.cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
             </div>
         </>
     )

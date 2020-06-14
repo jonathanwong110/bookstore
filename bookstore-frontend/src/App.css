@@ -74,4 +74,11 @@ body {
 
 .cart-total {
   font-size: 30px;
+  float: right;
+  margin-right: 50px;
+}
+
+.clear-cart-button {
+  float: left;
+  margin-left: 20px;
 }
