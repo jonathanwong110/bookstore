@@ -1,5 +1,5 @@
 export default function manageCart(state = {
-    books: []
+    cart: []
 }, action) {
     switch (action.type) {
         default:
