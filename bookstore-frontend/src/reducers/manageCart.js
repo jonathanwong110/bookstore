@@ -1,5 +1,5 @@
 import { cartActionTypes } from "../actions/cartActions"
-import { addBookToCart } from '../abilities/cartAbilities'
+import { addBookToCart, removeBookFromCart } from '../abilities/cartAbilities'
 
 export default function manageCart(state = {
     cartBooks: []
@@ -9,6 +9,11 @@ export default function manageCart(state = {
             return {
                 ...state,
                 cartBooks: addBookToCart(state.cartBooks, action.payload)
+            }
+        case cartActionTypes.REMOVE_FROM_CART:
+            return {
+                ...state,
+                cartBooks: removeBookFromCart(state.cartBooks, action.payload)
             }
         default:
             return state

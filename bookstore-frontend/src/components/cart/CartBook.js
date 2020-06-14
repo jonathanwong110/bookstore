@@ -9,20 +9,20 @@ export default function CartBook(props) {
         <tr key={cartBook.id}>
             <td>
                 <br></br>
-                <img src={cartBook.image} alt={cartBook[1]}height='100px' width='100px'>
+                <img src={cartBook.image} alt={cartBook[1]} height='100px' width='100px'>
                 </img>
             </td>
             <td>
                 <strong>{cartBook.title}</strong>
             </td>
             <td>
-                ${cartBook.price}.00
+                ${cartBook.price * cartBook.quantity}.00
             </td>
             <td>
                 {cartBook.quantity}
             </td>
             <td>
-                <Button variant="danger">
+                <Button variant="danger" onClick={() => props.removeFromCart(cartBook)}>
                     Remove from Cart
                 </Button>
             </td>

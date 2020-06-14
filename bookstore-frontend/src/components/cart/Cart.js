@@ -26,9 +26,8 @@ export default function Cart(props) {
                 </thead>
                 <tbody>
                     {cart.map(cartBook => {
-                        console.log('cartBook', cartBook)
                         return (
-                        <CartBook key={cartBook.id} cartBook={cartBook}/>
+                        <CartBook key={cartBook.id} cartBook={cartBook} removeFromCart={props.removeFromCart}/>
                                 )
                             }
                         )
