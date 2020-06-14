@@ -14,7 +14,7 @@ class Books extends Component {
         return (
             <div>
                 {books.map(book => {
-                    return <Book id={book.id} book={book} />
+                    return <Book key={book.id} book={book} />
                 })
                 }
             </div>
