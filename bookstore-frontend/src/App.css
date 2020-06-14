@@ -37,8 +37,14 @@
   }
 }
 
-.white-logo {
-  color: white;
+.logo {
+  color: black;
+  font-size: 25px;
+}
+
+.logo:hover {
+  color: black;
+  text-decoration: none;
 }
 
 .title {
@@ -66,10 +72,21 @@ body {
   left: 0;
   background-color: #111;
   padding-top: 60px;
+  font-size: 22px;
+  color: black;
+}
+
+#mySidenav:hover {
+  text-decoration: none;
 }
 
 .category {
-  font-size: 14px;
+  color: black;
+  font-size: 20px;
+}
+
+.category:hover {
+  text-decoration: none;
 }
 
 .cart-total {

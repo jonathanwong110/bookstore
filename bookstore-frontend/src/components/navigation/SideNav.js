@@ -7,7 +7,7 @@ export default function CategoryNav(props) {
         <>
             <div id="mySidenav">
                 <div className="mr-auto" onClick={() => props.filterBy('')}>
-                    <Link to="/"> <u>All</u> </Link>
+                    <Link to="/" className="category"> All </Link>
                 </div>
                 <div className="mr-auto" onClick={() => props.filterBy('Biography')}>
                     <Link to="/books/biography" className="category"> Biography </Link>

@@ -13,6 +13,8 @@ class App extends Component {
         <div className="App">
           <MainNav/>
           <br></br>
+          <br></br>
+          <br></br>
           <Switch>
             <Route exact path="/"> <BooksContainer/> </Route>
             <Route exact path="/books/biography"> <BooksContainer/> </Route>
