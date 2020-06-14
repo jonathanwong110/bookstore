@@ -11,11 +11,16 @@ function DisplayBook(props) {
     const { books } = props
     if (!books) return null
 
+    function handleAdd() {
+        books.addToCart(books.book)
+        handleClose()
+    }
+
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
                 Details
-      </Button>
+            </Button>
 
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
@@ -57,7 +62,11 @@ function DisplayBook(props) {
                 <Modal.Footer>
                     <Button variant="dark" onClick={handleClose}>
                         Close
-          </Button>
+                    </Button>
+
+                    <Button variant="success" onClick={handleAdd}>
+                        Add to Cart
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>
