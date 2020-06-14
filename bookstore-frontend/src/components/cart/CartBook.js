@@ -16,16 +16,25 @@ export default function CartBook(props) {
                 <strong>{cartBook.title}</strong>
             </td>
             <td>
+                {cartBook.price}.00
+            </td>
+            <td>
+                <Button variant="info" onClick={() => props.removeFromCart(cartBook)}>
+                    -
+                </Button>
+                [{cartBook.quantity}]
+                <Button variant="info" onClick={() => props.addToCart(cartBook)}>
+                    +
+                </Button>
+            </td>
+            <td>
                 ${cartBook.price * cartBook.quantity}.00
             </td>
             <td>
-                {cartBook.quantity}
-            </td>
-            <td>
-                <Button variant="danger" onClick={() => props.removeFromCart(cartBook)}>
-                    Remove from Cart
+                <Button variant="danger" onClick={() => props.clearBookFromCart(cartBook)}>
+                    X
                 </Button>
             </td>
-        </tr>        
+        </tr>
     );
-  }
+}

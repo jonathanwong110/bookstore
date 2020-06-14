@@ -15,6 +15,13 @@ export default function manageCart(state = {
                 ...state,
                 cartBooks: removeBookFromCart(state.cartBooks, action.payload)
             }
+        case cartActionTypes.CLEAR_BOOK_FROM_CART:
+            return {
+                ...state,
+                cartBooks: state.cartBooks.filter(
+                    (cartBook) => cartBook.id !== action.payload.id
+                ),
+            };
         default:
             return state
     }

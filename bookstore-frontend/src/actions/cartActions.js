@@ -12,7 +12,7 @@ export const removeFromCart = (book) => {
     }
 }
 
-export const clearItemFromCart = (book) => ({
+export const clearBookFromCart = (book) => ({
     type: cartActionTypes.CLEAR_BOOK_FROM_CART,
     payload: book
   });
