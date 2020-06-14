@@ -9,11 +9,20 @@ export default function CategoryNav(props) {
                 <div className="mr-auto" onClick={() => props.filterBy('')}>
                     <Link to="/"> <u>All</u> </Link>
                 </div>
+                <div className="mr-auto" onClick={() => props.filterBy('Biography')}>
+                    <Link to="/books/biography" className="category"> Biography </Link>
+                </div>
+                <div className="mr-auto" onClick={() => props.filterBy('Business')}>
+                    <Link to="/books/business" className="category"> Business </Link>
+                </div>
                 <div className="mr-auto" onClick={() => props.filterBy('Fiction')}>
-                    <Link to="/books/fiction" className="category"> Fiction</Link>
+                    <Link to="/books/fiction" className="category"> Fiction </Link>
+                </div>
+                <div className="mr-auto" onClick={() => props.filterBy('Mystery')}>
+                    <Link to="/books/mystery" className="category"> Mystery </Link>
                 </div>
                 <div className="mr-auto" onClick={() => props.filterBy('Non-Fiction')}>
-                    <Link to="/books/nonfiction" className="category"> Non-Fiction </Link>
+                    <Link to="/books/nonfiction" className="category"> Nonfiction </Link>
                 </div>
             </div>
         </>
