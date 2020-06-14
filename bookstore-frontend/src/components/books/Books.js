@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Book from './Book'
+import { CardDeck, Container, Row, Col } from 'react-bootstrap';
 
 class Books extends Component {
 
@@ -12,12 +13,18 @@ class Books extends Component {
         let { books } = this.props
 
         return (
-            <div>
-                {books.map(book => {
-                    return <Book key={book.id} book={book} />
-                })
-                }
-            </div>
+            <CardDeck>
+                <Container>
+                    <Row>
+                        {books.map(book => {
+                            return <Col key={book.id} xs="2" md="2">
+                                <Book key={book.id} book={book} />
+                            </Col>
+                        })
+                        }
+                    </Row>
+                </Container>
+            </CardDeck>
         )
 
     }

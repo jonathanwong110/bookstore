@@ -11,6 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <MainNav/>
+          <br></br>
           <Switch>
             <Route exact path="/"> <BooksContainer/> </Route>
           </Switch>
