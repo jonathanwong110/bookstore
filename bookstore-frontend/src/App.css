@@ -50,3 +50,24 @@
   font-size: 13px;
   font-weight: bold;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+#mySidenav {
+  margin-left: 30px;
+  margin-top: 10px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 60px;
+}
+
+.category {
+  font-size: 14px;
+}

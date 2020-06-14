@@ -14,6 +14,8 @@ class App extends Component {
           <br></br>
           <Switch>
             <Route exact path="/"> <BooksContainer/> </Route>
+            <Route exact path="/books/fiction"> <BooksContainer/> </Route>
+            <Route exact path="/books/nonfiction"> <BooksContainer/> </Route>
           </Switch>
         </div>
       </BrowserRouter>

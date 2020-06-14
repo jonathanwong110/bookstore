@@ -10,7 +10,7 @@ export default function Book(props) {
             <Card.Img variant="top" src={book.image} height="200px" width="200px" />
             <Card.Body>
                 {/* <a href="/books" class="title">{book.title}</a> */}
-                <a href="/books" class="title">{book.title}</a>
+                <a href="/books" className="title">{book.title}</a>
             </Card.Body>
         </Card>
     )
