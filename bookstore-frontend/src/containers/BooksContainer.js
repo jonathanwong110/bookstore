@@ -4,6 +4,7 @@ import Books from '../components/books/Books'
 import { loadBooks } from '../actions/booksActions'
 import { Container } from 'react-bootstrap'
 import SideNav from '../components/navigation/SideNav'
+import { addToCart } from '../actions/cartActions'
 
 class BooksContainer extends Component {
 
@@ -38,7 +39,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        loadBooks: () => dispatch(loadBooks())
+        loadBooks: () => dispatch(loadBooks()),
+        addToCart: () => dispatch(addToCart())
     }
 }
 
