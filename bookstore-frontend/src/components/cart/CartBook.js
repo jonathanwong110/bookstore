@@ -4,21 +4,22 @@ import { Button } from 'react-bootstrap'
 export default function CartBook(props) {
 
     const { cartBook } = props
-    console.log('cartBook', cartBook)
 
     return (
-        <tr key={cartBook[0]}>
+        <tr key={cartBook.id}>
             <td>
-                <strong>{cartBook[1]}</strong>
                 <br></br>
-                <img src={cartBook[4]} alt={cartBook[1]}height='100px' width='100px'>
+                <img src={cartBook.image} alt={cartBook[1]}height='100px' width='100px'>
                 </img>
             </td>
             <td>
-                {cartBook[3]}
+                <strong>{cartBook.title}</strong>
             </td>
             <td>
-                {cartBook[2]}
+                ${cartBook.price}.00
+            </td>
+            <td>
+                {cartBook.quantity}
             </td>
             <td>
                 <Button variant="danger">

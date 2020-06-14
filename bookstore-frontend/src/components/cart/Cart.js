@@ -18,15 +18,17 @@ export default function Cart(props) {
                 <thead>
                     <tr>
                     <th>Product</th>
-                    <th>Description</th>
+                    <th>Title</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>Remove</th>
                     </tr>
                 </thead>
                 <tbody>
                     {cart.map(cartBook => {
+                        console.log('cartBook', cartBook)
                         return (
-                        <CartBook key={cartBook[0]} cartBook={cartBook}/>
+                        <CartBook key={cartBook.id} cartBook={cartBook}/>
                                 )
                             }
                         )
