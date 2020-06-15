@@ -14,7 +14,7 @@ function DisplayCart(props) {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="primary" className="checkout-button" onClick={handleShow}>
                 Check Out
             </Button>
 

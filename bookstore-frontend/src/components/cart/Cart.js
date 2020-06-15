@@ -39,7 +39,7 @@ export default function Cart(props) {
             </Table>
             <br></br>
             <br></br>
-            <Button variant="danger" size="sm" className="clear-cart-button" onClick={() => props.clearCart()}>
+            <Button variant="danger" size="md" className="clear-cart-button" onClick={() => props.clearCart()}>
                 Clear Cart
             </Button>
             <div className="cart-total">
