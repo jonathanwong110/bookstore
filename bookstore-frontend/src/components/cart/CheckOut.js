@@ -67,7 +67,7 @@ function DisplayCart(props) {
                             <Form.Control placeholder="Country" />
                         </Form.Group>
                         <Button variant="primary" type="submit">
-                            Payment Info
+                            Payment Info →
                         </Button>
                     </Form>
                 </Modal.Body>
