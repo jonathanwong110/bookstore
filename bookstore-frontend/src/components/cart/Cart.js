@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Table, Button } from 'react-bootstrap';
 import CartBook from './CartBook'
+import CheckOut from './CheckOut'
 
 export default function Cart(props) {
 
@@ -44,6 +45,7 @@ export default function Cart(props) {
             <div className="cart-total">
                 Total: ${arrSum(props.cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
             </div>
+            <CheckOut cart={props}/>
         </>
     )
 }
