@@ -16,7 +16,7 @@ export default function CartBook(props) {
                 <strong>{cartBook.title}</strong>
             </td>
             <td>
-                {cartBook.price}.00
+                ${cartBook.price}.00
             </td>
             <td>
                 <Button variant="outline-dark" size="sm" onClick={() => props.removeFromCart(cartBook)}>
