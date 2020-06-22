@@ -19,11 +19,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/"> <HomeContainer/> </Route>
             <Route exact path="/books"> <BooksContainer/> </Route>
-            <Route exact path="/books/biography"> <BooksContainer/> </Route>
-            <Route exact path="/books/business"> <BooksContainer/> </Route>
-            <Route exact path="/books/fiction"> <BooksContainer/> </Route>
-            <Route exact path="/books/mystery"> <BooksContainer/> </Route>
-            <Route exact path="/books/nonfiction"> <BooksContainer/> </Route>
+            <Route exact path="/books/:category"> <BooksContainer/> </Route>
             <Route exact path="/cart"> <CartContainer/> </Route>
           </Switch>
         </div>
