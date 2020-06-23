@@ -8,7 +8,7 @@ class MainNav extends Component {
 
     return (
       <>
-        <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
+        <Navbar collapseOnSelect bg="secondary" expand="lg" fixed="top">
           <Link to="/" className="logo">BookStore</Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
