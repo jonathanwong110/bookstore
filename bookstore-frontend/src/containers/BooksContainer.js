@@ -18,7 +18,11 @@ class BooksContainer extends Component {
 
   componentDidMount() {
     const {category} = this.props.match.params
-    this.filterBy(category)
+    if (this.props.match.params.category !== undefined) {
+      this.filterBy(category)
+    } else {
+      this.props.loadBooks()
+    }
   }
 
   filterBy = category => {

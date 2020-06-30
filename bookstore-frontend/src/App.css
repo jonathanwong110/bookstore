@@ -57,10 +57,6 @@
   font-weight: bold;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 #mySidenav {
   display: block;
   margin-left: 30px;

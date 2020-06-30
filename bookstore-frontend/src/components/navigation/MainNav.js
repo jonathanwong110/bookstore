@@ -15,8 +15,11 @@ class MainNav extends Component {
             <Nav className="mr-auto">
             </Nav>
             <Nav>
+              <Link to="/" className="span">
+                Directory
+              </Link>
               <Link to="/books" className="span">
-                Books
+                Shop
               </Link>
               <Link to="/cart" className="span">
                 <Image src="https://image.flaticon.com/icons/png/512/263/263142.png" className="shoppingCartIcon" width="30px" height="30px" />
