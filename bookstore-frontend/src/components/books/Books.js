@@ -54,9 +54,9 @@ class Books extends Component {
           <Row>
             {books.map(book => {
               return this.props.filterBy === "" || book.category === this.props.filterBy ?
-                <div className="books" key={book.id}>
+                <div className="all-books" key={book.id}>
                   <Col key={book.id} xs="2" md="2">
-                    <Book book={book} addToCart={this.props.addToCart} />
+                    <Book className="individual-book" book={book} addToCart={this.props.addToCart} />
                   </Col>
                 </div> : null
             }
