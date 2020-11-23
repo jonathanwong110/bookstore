@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function CategoryNav(props) {
+export default function SideNav(props) {
 
   return (
     <>

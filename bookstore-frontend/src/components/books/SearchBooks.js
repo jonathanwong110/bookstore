@@ -1,19 +1,14 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 
 export default function SearchBooks(props) {
 
-    return (
-        <div className="searchForm">
-            <input 
-            type="text" 
-            name="search"
-            value={props.searchEntry}
-            placeholder="Search for a Book"
-            onKeyPress={props.onKeyPress}
-            onChange={e => props.handleChange(e)}/> 
-            <button type="submit" onClick={e => props.handleSubmit(e)}>
-                Search
-            </button>
-        </div> 
+  return (
+    <div>
+      <input type="text" name="search" id="searchForm" value={props.searchEntry} placeholder="Search" onKeyPress={props.onKeyPress} onChange={e => props.handleChange(e)} />
+      <Button type="submit" variant="primary" onClick={e => props.handleSubmit(e)}>
+        Search
+      </Button>
+    </div>
   );
 }

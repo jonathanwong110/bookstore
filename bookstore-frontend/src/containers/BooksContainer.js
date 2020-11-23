@@ -25,7 +25,7 @@ class BooksContainer extends Component {
     }
   }
 
-  filterBy = category => {
+  filterBy = (category) => {
     this.setState({
       filterBy: category === this.state.filterBy ? "" : category
     })

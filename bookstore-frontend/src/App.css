@@ -85,6 +85,7 @@
 
 .book-category:hover {
   text-decoration: none;
+  color: black;
 }
 
 .cart-total {
@@ -113,6 +114,12 @@
 
 .all-books {
   margin-left: 12%;
+}
+
+@media (max-width: 600px) {
+  .all-books {
+    margin-left: 30%;
+  }
 }
 
 .span {
@@ -220,4 +227,9 @@
   color: black;
   top: 40%;
   left: 30%;
+}
+
+#searchForm {
+  padding-bottom: 5px;
+  height: 36.5px;
 }

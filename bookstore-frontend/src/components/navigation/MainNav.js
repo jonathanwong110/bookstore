@@ -32,4 +32,4 @@ class MainNav extends Component {
   }
 }
 
-export default MainNav;
+export default MainNav

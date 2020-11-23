@@ -14,13 +14,13 @@ class CartContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     cart: state.cart.cartBooks,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (book) => dispatch(addToCart(book)),
     removeFromCart: (id) => dispatch(removeFromCart(id)),
