@@ -41,17 +41,10 @@ class BooksContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     books: state.books.books,
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    loadBooks: () => dispatch(loadBooks()),
-    addToCart: (book) => dispatch(addToCart(book))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(BooksContainer))
+export default connect(mapStateToProps, {loadBooks, addToCart})(withRouter(BooksContainer))

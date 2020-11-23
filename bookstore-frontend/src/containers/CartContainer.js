@@ -20,13 +20,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addToCart: (book) => dispatch(addToCart(book)),
-    removeFromCart: (id) => dispatch(removeFromCart(id)),
-    clearBookFromCart: (id) => dispatch(clearBookFromCart(id)),
-    clearCart: () => dispatch(clearCart())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartContainer)
+export default connect(mapStateToProps, {addToCart, removeFromCart, clearBookFromCart, clearCart})(CartContainer)
