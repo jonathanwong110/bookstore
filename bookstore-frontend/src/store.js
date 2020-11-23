@@ -4,8 +4,8 @@ import manageCart from './reducers/manageCart.js'
 import thunk from 'redux-thunk'
 
 const reducer = combineReducers({
-    books: manageBooks,
-    cart: manageCart
+  books: manageBooks,
+  cart: manageCart
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

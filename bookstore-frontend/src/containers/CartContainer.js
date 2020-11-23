@@ -16,7 +16,7 @@ class CartContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    cart: state.cart.cartBooks,
+    cart: state.cart.cart,
   }
 }
 

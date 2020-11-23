@@ -20,8 +20,7 @@ function DisplayBook(props) {
     <>
       <Button variant="primary" onClick={handleShow}>
         Details
-            </Button>
-
+      </Button>
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>
@@ -33,7 +32,6 @@ function DisplayBook(props) {
         <Modal.Body>
           <h2 className="center-text"> {books.book.title} </h2>
           <p className="center-text"> by </p>
-
           <h6 className="center-text">{books.book.author}</h6>
           <br></br>
           <h4 className="center-text">${books.book.price}.00</h4>
@@ -61,11 +59,10 @@ function DisplayBook(props) {
         <Modal.Footer>
           <Button variant="dark" onClick={handleClose}>
             Close
-                    </Button>
-
+          </Button>
           <Button variant="success" onClick={handleAdd}>
             Add to Cart
-                    </Button>
+          </Button>
         </Modal.Footer>
       </Modal>
     </>

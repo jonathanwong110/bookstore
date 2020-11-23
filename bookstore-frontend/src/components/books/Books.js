@@ -65,9 +65,7 @@ class Books extends Component {
         </Container>
       </CardDeck>
     )
-
   }
-
 }
 
 export default Books

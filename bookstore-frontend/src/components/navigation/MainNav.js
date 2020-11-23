@@ -12,8 +12,7 @@ class MainNav extends Component {
           <Link to="/" className="logo">BookStore</Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-            </Nav>
+            <Nav className="mr-auto"></Nav>
             <Nav>
               <Link to="/" className="span"> Directory </Link>
               <Link to="/books" className="span"> Shop </Link>
