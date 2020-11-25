@@ -59,11 +59,11 @@
 
 #mySidenav {
   display: block;
-  margin-left: 3%;
-  margin-top: 10%;
+  margin-left: 50px;
+  margin-top: 120px;
   height: 100%;
   width: 0;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
@@ -113,13 +113,8 @@
 }
 
 .all-books {
-  margin-left: 12%;
-}
-
-@media (max-width: 600px) {
-  .all-books {
-    margin-left: 30%;
-  }
+  margin-left: 130px;
+  text-align: center
 }
 
 .span {

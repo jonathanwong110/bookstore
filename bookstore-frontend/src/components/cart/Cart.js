@@ -12,7 +12,7 @@ export default function Cart(props) {
     <>
       <br></br>
       <Navbar>
-        <Navbar.Brand>
+        <Navbar.Brand style={{fontSize: "25px", fontWeight: "500"}}>
           Shopping Cart
         </Navbar.Brand>
       </Navbar>
@@ -41,7 +41,7 @@ export default function Cart(props) {
       <Button variant="primary" size="md" className="clear-cart-button" onClick={() => props.clearCart()}>
         Clear Cart
       </Button>
-      <div className="cart-total">
+      <div className="cart-total" style={{fontWeight: "500"}}>
         Total: ${arrSum(props.cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
       </div>
       <CheckOut cart={props} />
