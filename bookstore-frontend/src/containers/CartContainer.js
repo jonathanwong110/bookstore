@@ -7,9 +7,7 @@ class CartContainer extends Component {
 
   render() {
     return (
-      <div>
-        <Cart cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} clearBookFromCart={this.props.clearBookFromCart} clearCart={this.props.clearCart}/>
-      </div>
+      <Cart cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} clearBookFromCart={this.props.clearBookFromCart} clearCart={this.props.clearCart} />
     )
   }
 }
@@ -20,4 +18,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {addToCart, removeFromCart, clearBookFromCart, clearCart})(CartContainer)
+export default connect(mapStateToProps, { addToCart, removeFromCart, clearBookFromCart, clearCart })(CartContainer)
