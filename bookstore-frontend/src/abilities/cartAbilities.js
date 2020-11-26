@@ -4,7 +4,7 @@ export const addBookToCart = (cart, cartBookToAdd) => {
     return cart.map((cartBook) =>
       cartBook.id === cartBookToAdd.id ? { ...cartBook, quantity: cartBook.quantity + 1 } : cartBook)
   }
-  return [...cart, { ...cartBookToAdd, quantity: 1 }];
+  return [...cart, { ...cartBookToAdd, quantity: 1 }]
 }
 
 export const removeBookFromCart = (cart, cartBookToRemove) => {
