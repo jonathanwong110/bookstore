@@ -1,30 +1,31 @@
 import React from 'react';
-import { Navbar, Table, Button } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import CartBook from './CartBook'
 import CheckOut from './CheckOut'
 
 export default function Cart(props) {
 
-  const { cart } = props
+  let { cart } = props
   const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 
   return (
     <>
       <br></br>
-      <Navbar>
-        <Navbar.Brand style={{fontSize: "25px", fontWeight: "500"}}>
-          Shopping Cart
-        </Navbar.Brand>
-      </Navbar>
+      <div style={{ marginLeft: "20px", marginBottom: "20px", fontSize: "25px", fontWeight: "500" }}>
+        Shopping Cart
+      </div>
+      <div style={{ marginLeft: "20px", marginBottom: "20px", fontSize: "20px", fontWeight: "400" }}>
+        {arrSum(cart.map(cartBook => cartBook.quantity))} Items
+        </div>
       <Table>
         <thead>
-          <tr>
-            <th>Product</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-            <th>Remove</th>
+          <tr style={{ textAlign: "center" }}>
+            <th style={{fontSize: "18px", fontWeight: "500"}}>Product</th>
+            <th style={{fontSize: "18px", fontWeight: "500"}}>Title</th>
+            <th style={{fontSize: "18px", fontWeight: "500"}}>Price</th>
+            <th style={{fontSize: "18px", fontWeight: "500"}}>Quantity</th>
+            <th style={{fontSize: "18px", fontWeight: "500"}}>Subtotal</th>
+            <th style={{fontSize: "18px", fontWeight: "500"}}>Remove</th>
           </tr>
         </thead>
         <tbody>
@@ -41,8 +42,8 @@ export default function Cart(props) {
       <Button variant="primary" size="md" className="clear-cart-button" onClick={() => props.clearCart()}>
         Clear Cart
       </Button>
-      <div className="cart-total" style={{fontWeight: "500"}}>
-        Total: ${arrSum(props.cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
+      <div className="cart-total" style={{ fontWeight: "500" }}>
+        Total: ${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
       </div>
       <CheckOut cart={props} />
     </>

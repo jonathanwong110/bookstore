@@ -30,11 +30,11 @@ function DisplayBook(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h2 className="center-text"> {books.book.title} </h2>
-          <p className="center-text"> by </p>
-          <h6 className="center-text">{books.book.author}</h6>
+          <h2 style={{ textAlign: "center" }}> {books.book.title} </h2>
+          <p style={{ textAlign: "center" }}> by </p>
+          <h6 style={{ textAlign: "center" }}>{books.book.author}</h6>
           <br></br>
-          <h4 className="center-text">${books.book.price}.00</h4>
+          <h4 style={{ textAlign: "center" }}>${books.book.price}.00</h4>
           <br></br>
           <p>{books.book.description}</p>
           <h3>Reviews: </h3>

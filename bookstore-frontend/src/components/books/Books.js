@@ -50,11 +50,11 @@ class Books extends Component {
         <Container>
           <SearchBooks onKeyPress={this.onKeyPress} {...{ searchEntry, searchQuery }} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
           <br></br>
-          <div className="category-display">{this.props.filterBy.charAt(0).toUpperCase() + this.props.filterBy.slice(1)} Books </div>
+          <div style={{textAlign: "center", fontSize: "25px"}}>{this.props.filterBy.charAt(0).toUpperCase() + this.props.filterBy.slice(1)} Books </div>
           <Row>
             {books.map(book => {
               return this.props.filterBy === "" || book.category === this.props.filterBy ?
-                <div className="all-books" key={book.id}>
+                <div style={{marginLeft: "130px", textAlign: "center"}} key={book.id}>
                   <Col key={book.id} xs="2" md="2">
                     <Book className="individual-book" book={book} addToCart={this.props.addToCart} />
                   </Col>

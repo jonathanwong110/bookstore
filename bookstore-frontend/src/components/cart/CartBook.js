@@ -6,28 +6,28 @@ export default function CartBook(props) {
   const { cartBook } = props
 
   return (
-    <tr key={cartBook.id}>
+    <tr key={cartBook.id} style={{ textAlign: "center" }}>
       <td>
         <br></br>
         <img src={cartBook.image} alt={cartBook[1]} height='100px' width='100px'>
         </img>
       </td>
       <td>
-        <strong style={{fontWeight: "500"}}>{cartBook.title}</strong>
+        <strong style={{ fontWeight: "500" }}>{cartBook.title}</strong>
       </td>
-      <td style={{fontWeight: "500"}}>
+      <td style={{ fontWeight: "500" }}>
         ${cartBook.price}.00
       </td>
       <td>
-        <Button variant="primary" size="sm" onClick={() => props.removeFromCart(cartBook)} style={{marginRight: "5px"}}>
+        <Button variant="primary" size="sm" onClick={() => props.removeFromCart(cartBook)} style={{ marginRight: "5px" }}>
           -
         </Button>
-        [{cartBook.quantity}]
-        <Button variant="primary" size="sm" onClick={() => props.addToCart(cartBook)} style={{marginLeft: "5px"}}>
+        <strong style={{ fontWeight: "500" }}>[{cartBook.quantity}]</strong>
+        <Button variant="primary" size="sm" onClick={() => props.addToCart(cartBook)} style={{ marginLeft: "5px" }}>
           +
         </Button>
       </td>
-      <td style={{fontWeight: "500"}}>
+      <td style={{ fontWeight: "500" }}>
         ${cartBook.price * cartBook.quantity}.00
       </td>
       <td>
