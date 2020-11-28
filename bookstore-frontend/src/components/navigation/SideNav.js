@@ -6,24 +6,12 @@ export default function SideNav(props) {
   return (
     <>
       <div id="mySidenav">
-        <div className="mr-auto" onClick={() => props.filterBy('')}>
-          <Link to="/books" className="book-category"> All </Link>
-        </div>
-        <div className="mr-auto" onClick={() => props.filterBy('biography')}>
-          <Link to="/books/biography" className="book-category"> Biography </Link>
-        </div>
-        <div className="mr-auto" onClick={() => props.filterBy('business')}>
-          <Link to="/books/business" className="book-category"> Business </Link>
-        </div>
-        <div className="mr-auto" onClick={() => props.filterBy('fiction')}>
-          <Link to="/books/fiction" className="book-category"> Fiction </Link>
-        </div>
-        <div className="mr-auto" onClick={() => props.filterBy('mystery')}>
-          <Link to="/books/mystery" className="book-category"> Mystery </Link>
-        </div>
-        <div className="mr-auto" onClick={() => props.filterBy('nonfiction')}>
-          <Link to="/books/nonfiction" className="book-category"> Nonfiction </Link>
-        </div>
+        <Link to="/books" className="book-category" onClick={() => props.filterBy('')}> All </Link>
+        <Link to="/books/category/biography" className="book-category" onClick={() => props.filterBy('biography')}> Biography </Link>
+        <Link to="/books/category/business" className="book-category" onClick={() => props.filterBy('business')}> Business </Link>
+        <Link to="/books/category/fiction" className="book-category" onClick={() => props.filterBy('fiction')}> Fiction </Link>
+        <Link to="/books/category/mystery" className="book-category" onClick={() => props.filterBy('mystery')}> Mystery </Link>
+        <Link to="/books/category/nonfiction" className="book-category" onClick={() => props.filterBy('nonfiction')}> Nonfiction </Link>
       </div>
     </>
   )

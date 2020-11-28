@@ -5,6 +5,7 @@ import BooksContainer from './containers/BooksContainer'
 import MainNav from './components/navigation/MainNav'
 import CartContainer from './containers/CartContainer'
 import HomeContainer from './containers/HomeContainer'
+const NotFound = () => (<div className="emptyPage">This page is not available</div>)
 
 class App extends Component {
 
@@ -17,10 +18,11 @@ class App extends Component {
           <br></br>
           <br></br>
           <Switch>
-            <Route exact path="/"> <HomeContainer /> </Route>
-            <Route exact path="/books"> <BooksContainer /> </Route>
-            <Route exact path="/books/:category"> <BooksContainer /> </Route>
-            <Route exact path="/cart"> <CartContainer /> </Route>
+            <Route exact path="/" component={HomeContainer} />
+            <Route exact path="/books" component={BooksContainer} />
+            <Route exact path="/books/category/:category" component={BooksContainer} />
+            <Route exact path="/cart" component={CartContainer} />
+            <Route component={NotFound} />
           </Switch>
         </div>
       </BrowserRouter>
