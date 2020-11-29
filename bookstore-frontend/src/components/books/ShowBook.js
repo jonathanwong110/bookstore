@@ -60,7 +60,7 @@ function DisplayBook(props) {
           <Button variant="dark" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="success" onClick={handleAdd}>
+          <Button variant="primary" onClick={handleAdd}>
             Add to Cart
           </Button>
         </Modal.Footer>

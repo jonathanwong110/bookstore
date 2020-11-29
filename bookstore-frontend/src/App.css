@@ -49,21 +49,50 @@
   font-weight: bold;
 }
 
+#cartButtonImage {
+  position: relative;
+  bottom: 3px;
+  width: 33px;
+  height: 33px;
+}
+
+#cartPreview div .arrow {
+  visibility: hidden;
+}
+
+#cartPreview {
+  position: relative;
+  width: 300px;
+  height: auto;
+}
+
+#cartPreviewDisplay {
+  border: 2px solid #6c757d;
+  width: auto;
+  height: auto;
+}
+
+#cartBookPreviewContents {
+  height: 230px;
+  word-break: break-word;
+  overflow-y: auto;
+}
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid;
+}
+
+#cartShortCutLink:hover {
+  text-decoration: none;
+}
+
 #mySidenav {
-  display: block;
-  margin-left: 50px;
-  margin-top: 120px;
-  height: 100%;
-  width: 0;
   position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  padding-top: 60px;
-  font-size: 22px;
-  color: black;
-  margin-right: 5%;
+  margin-top: 160px;
+  left: 25px;
+  width: 0;
 }
 
 #mySidenav:hover {
@@ -106,7 +135,7 @@
 }
 
 #cartQuantityNumber {
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   top: -25px;
   left: 10px;
@@ -230,4 +259,10 @@
 #searchForm {
   padding-bottom: 5px;
   height: 36.5px;
+}
+
+@media(max-width: 700px) {
+  #minusButton {
+    margin-left: -10px
+  }
 }

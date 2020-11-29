@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { Navbar, Nav, Image } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+// import { Navbar, Nav, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import CartHover from '../cart/CartHover'
 
 class MainNav extends Component {
 
   render() {
-
-    const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 
     return (
       <>
@@ -17,14 +17,9 @@ class MainNav extends Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto"></Nav>
             <Nav>
-              <Link to="/" className="span"> Directory </Link>
-              <Link to="/books" className="span"> Shop </Link>
-              <Link to="/cart" className="span">
-                <Image src="https://www.jing.fm/clipimg/full/89-896459_shopping-bag-clipart-icon-transparent-shopping-bag-png.png" width="33px" height="33px" style={{ position: "relative", bottom: "3px" }} />
-                <div id="cartQuantityNumber">
-                  {arrSum(this.props.cart.map(cartBook => cartBook.quantity))}
-                </div>
-              </Link>
+              <Link to="/" className="span" style={{position: "relative", top: "5px"}}> Directory </Link>
+              <Link to="/books" className="span" style={{position: "relative", top: "5px"}}> Shop </Link>
+              <CartHover cart={this.props.cart}/>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -10,7 +10,7 @@ function DisplayCart(props) {
 
   const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 
-  const { cart } = props
+  let { cart } = props
 
   return (
     <>
@@ -31,35 +31,35 @@ function DisplayCart(props) {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Group controlId="formEmail">
-              <Form.Control type="email" placeholder="Email" />
+            <Form.Group>
+              <Form.Control placeholder="Email" />
             </Form.Group>
-            <Form.Group controlId="formPhoneNumber">
+            <Form.Group>
               <Form.Control placeholder="Phone Number" />
             </Form.Group>
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridCity">
+              <Form.Group as={Col}>
                 <Form.Control placeholder="First Name" />
               </Form.Group>
-              <Form.Group as={Col} controlId="formGridState">
+              <Form.Group as={Col}>
                 <Form.Control placeholder="Last Name" />
               </Form.Group>
             </Form.Row>
-            <Form.Group controlId="formStreet">
+            <Form.Group>
               <Form.Control placeholder="Street" />
             </Form.Group>
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridCity">
+              <Form.Group as={Col}>
                 <Form.Control placeholder="City" />
               </Form.Group>
-              <Form.Group as={Col} controlId="formGridState">
+              <Form.Group as={Col}>
                 <Form.Control placeholder="State" />
               </Form.Group>
-              <Form.Group as={Col} controlId="formGridZip">
+              <Form.Group as={Col}>
                 <Form.Control placeholder="Zip Code" />
               </Form.Group>
             </Form.Row>
-            <Form.Group controlId="formCountry">
+            <Form.Group>
               <Form.Control placeholder="Country" />
             </Form.Group>
             <Button variant="primary" type="submit">

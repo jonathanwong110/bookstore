@@ -48,9 +48,11 @@ class Books extends Component {
     return (
       <CardDeck>
         <Container>
+          <br></br>
           <SearchBooks onKeyPress={this.onKeyPress} {...{ searchEntry, searchQuery }} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
           <br></br>
           <div style={{textAlign: "center", fontSize: "25px"}}>{this.props.filterBy.charAt(0).toUpperCase() + this.props.filterBy.slice(1)} Books </div>
+          <br></br>
           <Row>
             {books.map(book => {
               return this.props.filterBy === "" || book.category === this.props.filterBy ?
