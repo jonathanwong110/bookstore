@@ -32,7 +32,7 @@ export default function CartPreview(props) {
                 <Popover id="popover-basic">
                   <Popover.Content id="cartPreviewDisplay">
                     <div id="cartBookPreviewContents">
-                      {cart.length === 0 ? <div style={{ textAlign: "center", fontSize: "15px" }}>Your cart is empty</div> :
+                      {cart.length === 0 ? <div style={{ textAlign: "center", fontSize: "18px", fontWeight: "500" }}>Your cart is empty</div> :
                         cart.map(cartBook => {
                           return (
                             <div key={cartBook.id}>

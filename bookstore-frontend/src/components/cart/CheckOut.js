@@ -62,7 +62,7 @@ function DisplayCart(props) {
             <Form.Group>
               <Form.Control placeholder="Country" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" style={{width: "100%"}} disabled>
               Payment Info →
             </Button>
           </Form>
