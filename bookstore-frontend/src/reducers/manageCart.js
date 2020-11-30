@@ -7,7 +7,7 @@ export default function manageCart(state = {
   switch (action.type) {
     case cartActionTypes.ADD_TO_CART:
       return {
-        ...state, cart: addBookToCart(state.cart, action.payload) 
+        ...state, cart: addBookToCart(state.cart, action.payload)
       }
     case cartActionTypes.REMOVE_FROM_CART:
       return {
@@ -19,7 +19,8 @@ export default function manageCart(state = {
       }
     case cartActionTypes.CLEAR_CART:
       return {
-        ...state, cart: []}
+        ...state, cart: []
+      }
     default:
       return state
   }

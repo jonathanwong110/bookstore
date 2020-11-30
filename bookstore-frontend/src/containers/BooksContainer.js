@@ -17,7 +17,7 @@ class BooksContainer extends Component {
   }
 
   componentDidMount() {
-    const {category} = this.props.match.params
+    let { category } = this.props.match.params
     if (this.props.match.params.category !== undefined) {
       this.filterBy(category)
     } else {
@@ -47,4 +47,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {loadBooks, addToCart})(withRouter(BooksContainer))
+export default connect(mapStateToProps, { loadBooks, addToCart })(withRouter(BooksContainer))

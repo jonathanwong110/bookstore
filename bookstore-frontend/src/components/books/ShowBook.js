@@ -8,7 +8,7 @@ function DisplayBook(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { books } = props
+  let { books } = props
   if (!books) return null
 
   function handleAdd() {
@@ -18,7 +18,7 @@ function DisplayBook(props) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} style={{fontSize: "15px", width: "90px", marginLeft: "-30px"}}>
+      <Button variant="primary" onClick={handleShow} style={{ fontSize: "15px", width: "90px", marginLeft: "-26px" }}>
         Details
       </Button>
       <Modal show={show} onHide={handleClose} animation={false}>

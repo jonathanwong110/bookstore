@@ -32,7 +32,7 @@ export default function CartPreview(props) {
                 <Popover id="popover-basic">
                   <Popover.Content id="cartPreviewDisplay">
                     <div id="cartBookPreviewContents">
-                      {cart.length === 0 ? <div style={{textAlign: "center", fontSize: "15px"}}>Your cart is empty</div> :
+                      {cart.length === 0 ? <div style={{ textAlign: "center", fontSize: "15px" }}>Your cart is empty</div> :
                         cart.map(cartBook => {
                           return (
                             <div key={cartBook.id}>
@@ -40,7 +40,7 @@ export default function CartPreview(props) {
                               <br></br>
                               <br></br>
                               <div style={{ fontSize: "17px", wordBreak: "break-word" }}>{cartBook.title}</div>
-                              <div style={{ fontSize: "15px" }}>{cartBook.quantity} * ${cartBook.price} = ${cartBook.price * cartBook.quantity}.00</div>
+                              <div style={{ fontSize: "15px" }}>{cartBook.quantity} * ${cartBook.price}.00 = ${cartBook.price * cartBook.quantity}.00</div>
                               <br></br>
                             </div>
                           )
@@ -52,8 +52,8 @@ export default function CartPreview(props) {
                       Total ({arrSum(cart.map(cartBook => cartBook.quantity))} Items): ${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
                     </div>
                     <br></br>
-                    <Button variant="primary" style={{width: "100%", marginBottom: "5px"}} onClick={handleClick}>
-                      <Link to="/cart" id="cartShortCutLink" style={{ color: "white"}}>View Cart</Link>
+                    <Button variant="primary" style={{ width: "100%", marginBottom: "5px" }} onClick={handleClick}>
+                      <Link to="/cart" id="cartShortCutLink" style={{ color: "white" }}>View Cart</Link>
                     </Button>
                   </Popover.Content>
                 </Popover>

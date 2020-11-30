@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 
 export default function CartBook(props) {
 
-  const { cartBook } = props
+  let { cartBook } = props
 
   return (
     <tr key={cartBook.id} style={{ textAlign: "center" }}>

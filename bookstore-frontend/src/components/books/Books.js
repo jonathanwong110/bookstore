@@ -41,12 +41,12 @@ class Books extends Component {
 
   render() {
 
-    const { searchEntry, searchQuery } = this.state;
+    let { searchEntry, searchQuery } = this.state;
     let { books } = this.props
     if (searchQuery.length > 0) { books = books.filter(item => item.title.toLowerCase().includes(searchQuery)) }
 
     return (
-      <Container style={{textAlign: "center"}}>
+      <Container style={{ textAlign: "center" }}>
         <br></br>
         <SearchBooks onKeyPress={this.onKeyPress} {...{ searchEntry, searchQuery }} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         <br></br>
