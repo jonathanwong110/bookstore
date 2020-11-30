@@ -18,7 +18,7 @@ function DisplayBook(props) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} style={{fontSize: "15px", width: "90px", marginLeft: "-30px"}}>
         Details
       </Button>
       <Modal show={show} onHide={handleClose} animation={false}>

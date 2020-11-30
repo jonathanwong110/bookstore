@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Overlay, Image, Button, Popover } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-export default function CartHover(props) {
+export default function CartPreview(props) {
 
   const [show, setShow] = useState(false);
   const target = useRef(null);
@@ -26,7 +26,7 @@ export default function CartHover(props) {
         </Button>
         <Overlay target={target.current} show={show} placement="bottom">
           {({ placement, arrowProps, show: _show, popper, ...props }) => (
-            <div {...props} id="cartHoverShow">
+            <div {...props}>
               <br></br>
               <div id="cartPreview">
                 <Popover id="popover-basic">

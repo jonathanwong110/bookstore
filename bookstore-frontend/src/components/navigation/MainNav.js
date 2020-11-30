@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap';
-import CartHover from '../cart/CartHover'
+import CartPreview from '../cart/CartPreview'
 
 class MainNav extends Component {
 
@@ -14,9 +14,9 @@ class MainNav extends Component {
           <Link to="/" className="logo">BookStore</Link>
           <Nav className="mr-auto"></Nav>
           <Nav>
-            <Link to="/" className="span" style={{ position: "relative", top: "5px" }}> Directory </Link>
-            <Link to="/books" className="span" style={{ position: "relative", top: "5px" }}> Shop </Link>
-            <CartHover cart={this.props.cart} history={this.props.history} />
+            <Link to="/" className="span" style={{ position: "relative", top: "10px" }}> Directory </Link>
+            <Link to="/books" className="span" style={{ position: "relative", top: "10px" }}> Shop </Link>
+            <CartPreview cart={this.props.cart} history={this.props.history} />
           </Nav>
         </Navbar>
       </>
