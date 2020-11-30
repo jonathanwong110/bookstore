@@ -5,7 +5,7 @@ export default function SideNav(props) {
 
   return (
     <>
-      <div id="mySidenav">
+      <div id="sideNav">
         <Link to="/books" className="book-category" onClick={() => props.filterBy('')}> All </Link>
         <Link to="/books/category/biography" className="book-category" onClick={() => props.filterBy('biography')}> Biography </Link>
         <Link to="/books/category/business" className="book-category" onClick={() => props.filterBy('business')}> Business </Link>

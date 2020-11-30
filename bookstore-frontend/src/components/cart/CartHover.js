@@ -7,9 +7,13 @@ export default function CartHover(props) {
   const [show, setShow] = useState(false);
   const target = useRef(null);
 
-  let { cart } = props
+  let { cart, history } = props
 
   const arrSum = arr => arr.reduce((a, b) => a + b, 0)
+
+  function handleClick() {
+    history.push("/cart")
+  }
 
   return (
     <>
@@ -48,7 +52,7 @@ export default function CartHover(props) {
                       Total ({arrSum(cart.map(cartBook => cartBook.quantity))} Items): ${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
                     </div>
                     <br></br>
-                    <Button variant="primary" style={{width: "100%", marginBottom: "5px"}} onClick={(e) => { e.preventDefault(); window.location.href='/cart' }}>
+                    <Button variant="primary" style={{width: "100%", marginBottom: "5px"}} onClick={handleClick}>
                       <Link to="/cart" id="cartShortCutLink" style={{ color: "white"}}>View Cart</Link>
                     </Button>
                   </Popover.Content>

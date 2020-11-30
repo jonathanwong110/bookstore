@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { Link, withRouter } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap';
-// import { Navbar, Nav, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
 import CartHover from '../cart/CartHover'
 
 class MainNav extends Component {
@@ -11,17 +10,14 @@ class MainNav extends Component {
 
     return (
       <>
-        <Navbar collapseOnSelect bg="secondary" expand="lg" fixed="top">
+        <Navbar bg="secondary" fixed="top">
           <Link to="/" className="logo">BookStore</Link>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto"></Nav>
-            <Nav>
-              <Link to="/" className="span" style={{position: "relative", top: "5px"}}> Directory </Link>
-              <Link to="/books" className="span" style={{position: "relative", top: "5px"}}> Shop </Link>
-              <CartHover cart={this.props.cart}/>
-            </Nav>
-          </Navbar.Collapse>
+          <Nav className="mr-auto"></Nav>
+          <Nav>
+            <Link to="/" className="span" style={{ position: "relative", top: "5px" }}> Directory </Link>
+            <Link to="/books" className="span" style={{ position: "relative", top: "5px" }}> Shop </Link>
+            <CartHover cart={this.props.cart} history={this.props.history} />
+          </Nav>
         </Navbar>
       </>
     )
@@ -34,4 +30,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(MainNav)
+export default connect(mapStateToProps)(withRouter(MainNav))
