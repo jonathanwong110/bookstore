@@ -5,12 +5,12 @@ BookStore is a platform where users can view and purchases books.
 ## Installation
 
 1.	Clone or download BookStore.
-2.	Navigate to the bookStore-backend folder in your terminal
+2.	Navigate to the bookstore-backend folder in your terminal
 3.	Run bundle install
 4.	Run rails db:migrate
 5.	Run rails s
 6.	Create another terminal
-7.	Navigate to the bookStore-frontend folder
+7.	Navigate to the bookstore-frontend folder
 8.	Run npm start
 
 ## Contributing
