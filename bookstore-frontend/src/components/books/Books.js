@@ -47,7 +47,6 @@ class Books extends Component {
 
     return (
       <Container style={{ textAlign: "center" }}>
-        <br></br>
         <SearchBooks onKeyPress={this.onKeyPress} {...{ searchEntry, searchQuery }} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         <br></br>
         <div style={{ textAlign: "center", fontSize: "25px" }}>{this.props.filterBy.charAt(0).toUpperCase() + this.props.filterBy.slice(1)} Books </div>
@@ -55,9 +54,9 @@ class Books extends Component {
         <Row>
           {books.map(book => {
             return this.props.filterBy === "" || book.category === this.props.filterBy ?
-              <div style={{ marginLeft: "130px", textAlign: "center" }} key={book.id}>
+              <div style={{ position: "relative", left: "130px", textAlign: "center" }} key={book.id}>
                 <Col key={book.id}>
-                  <Book className="individual-book" book={book} addToCart={this.props.addToCart} />
+                  <Book book={book} addToCart={this.props.addToCart} />
                 </Col>
               </div> : null
           })}

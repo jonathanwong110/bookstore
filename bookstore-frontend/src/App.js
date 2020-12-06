@@ -14,7 +14,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <MainNav />
-          <div style={{ height: "81px", width: "0px" }}></div>
+          <div style={{ height: "150px", width: "0px" }}></div>
           <Switch>
             <Route exact path="/" component={HomeContainer} />
             <Route exact path="/books" component={BooksContainer} />

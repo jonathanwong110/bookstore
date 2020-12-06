@@ -10,7 +10,6 @@ export default function Cart(props) {
 
   return (
     <>
-      <br></br>
       <div style={{ marginLeft: "20px", marginBottom: "20px", fontSize: "25px", fontWeight: "500" }}>
         Shopping Cart
       </div>
