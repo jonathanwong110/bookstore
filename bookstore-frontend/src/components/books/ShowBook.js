@@ -18,7 +18,7 @@ function DisplayBook(props) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} style={{ fontSize: "15px", width: "90px", marginLeft: "-26px" }}>
+      <Button variant="secondary" onClick={handleShow} style={{ fontSize: "15px", width: "90px", position: "relative", bottom: "10px" }}>
         Details
       </Button>
       <Modal show={show} onHide={handleClose} animation={false}>
@@ -60,7 +60,7 @@ function DisplayBook(props) {
           <Button variant="dark" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleAdd}>
+          <Button variant="secondary" onClick={handleAdd}>
             Add to Cart
           </Button>
         </Modal.Footer>

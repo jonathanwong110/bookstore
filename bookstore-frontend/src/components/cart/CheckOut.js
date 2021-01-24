@@ -14,7 +14,7 @@ function DisplayCart(props) {
 
   return (
     <>
-      <Button variant="primary" className="checkout-button" onClick={handleShow}>
+      <Button variant="secondary" className="checkout-button" onClick={handleShow}>
         Check Out
       </Button>
       <Modal show={show} onHide={handleClose} animation={false}>
@@ -62,7 +62,7 @@ function DisplayCart(props) {
             <Form.Group>
               <Form.Control placeholder="Country" />
             </Form.Group>
-            <Button variant="primary" type="submit" style={{width: "100%"}} disabled>
+            <Button variant="secondary" type="submit" style={{width: "100%"}} disabled>
               Payment Info →
             </Button>
           </Form>

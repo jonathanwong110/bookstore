@@ -18,9 +18,9 @@ export default function CartPreview(props) {
   return (
     <>
       <div className="span">
-        <Button variant="flat" id="cartButton" ref={target} onClick={() => setShow(!show)}>
-          <Image id="cartButtonImage" src="https://www.jing.fm/clipimg/full/89-896459_shopping-bag-clipart-icon-transparent-shopping-bag-png.png" />
-          <div id="cartQuantityNumber">
+        <Button variant="flat" ref={target} onClick={() => setShow(!show)}>
+          <Image id="cart-button-image" src="https://www.jing.fm/clipimg/full/89-896459_shopping-bag-clipart-icon-transparent-shopping-bag-png.png" />
+          <div id="cart-quantity-number">
             {arrSum(cart.map(cartBook => cartBook.quantity))}
           </div>
         </Button>
@@ -28,10 +28,10 @@ export default function CartPreview(props) {
           {({ placement, arrowProps, show: _show, popper, ...props }) => (
             <div {...props}>
               <br></br>
-              <div id="cartPreview">
+              <div id="cart-preview">
                 <Popover id="popover-basic">
-                  <Popover.Content id="cartPreviewDisplay">
-                    <div id="cartBookPreviewContents">
+                  <Popover.Content id="cart-preview-display">
+                    <div id="cart-book-preview-contents">
                       {cart.length === 0 ? <div style={{ textAlign: "center", fontSize: "18px", fontWeight: "500" }}>Your cart is empty</div> :
                         cart.map(cartBook => {
                           return (
@@ -52,8 +52,8 @@ export default function CartPreview(props) {
                       Total ({arrSum(cart.map(cartBook => cartBook.quantity))} Items): ${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
                     </div>
                     <br></br>
-                    <Button variant="primary" style={{ width: "100%", marginBottom: "5px" }} onClick={handleClick}>
-                      <Link to="/cart" id="cartShortCutLink" style={{ color: "white" }}>View Cart</Link>
+                    <Button variant="secondary" style={{ width: "100%", marginBottom: "5px" }} onClick={handleClick}>
+                      <Link to="/cart" id="cart-shortcut-link" style={{ color: "white" }}>View Cart</Link>
                     </Button>
                   </Popover.Content>
                 </Popover>

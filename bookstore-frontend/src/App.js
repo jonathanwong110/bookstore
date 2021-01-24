@@ -5,7 +5,7 @@ import BooksContainer from './containers/BooksContainer'
 import MainNav from './components/navigation/MainNav'
 import CartContainer from './containers/CartContainer'
 import HomeContainer from './containers/HomeContainer'
-const NotFound = () => (<div className="emptyPage">This page is not available</div>)
+const NotFound = () => (<div className="empty-page">This page is not available</div>)
 
 class App extends Component {
 

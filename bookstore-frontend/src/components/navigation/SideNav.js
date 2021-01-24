@@ -5,7 +5,8 @@ export default function SideNav(props) {
 
   return (
     <>
-      <div id="sideNav">
+      <div id="sidenav">
+        <div className="book-category" style={{ marginBottom: "15px" }}>Categories</div>
         <Link to="/books" className="book-category" onClick={() => props.filterBy('')}> All </Link>
         <Link to="/books/category/biography" className="book-category" onClick={() => props.filterBy('biography')}> Biography </Link>
         <Link to="/books/category/business" className="book-category" onClick={() => props.filterBy('business')}> Business </Link>

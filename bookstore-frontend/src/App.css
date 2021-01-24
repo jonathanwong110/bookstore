@@ -2,7 +2,7 @@
   font-family: Verdana, sans-serif;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -26,9 +26,9 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
 
-.emptyPage {
+.empty-page {
   text-align: center;
   font-size: 50px;
 }
@@ -47,15 +47,7 @@
   display: none;
 }
 
-.title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; 
-  -webkit-box-orient: vertical;
-  font-weight: bold;
-  font-size: 16px;
-}
+/* Category Grid */
 
 @media (min-width: 1300px) {
   .container-sm, .container, .container-lg, .container-md, .container-xl {
@@ -64,63 +56,125 @@
   }
 }
 
-#cartButtonImage {
-  position: relative;
-  width: 33px;
-  height: 33px;
+.category-grid {
+  display: grid;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  max-width: 1100px;
 }
 
-#cartQuantityNumber {
-  font-size: 14px;
-  position: relative;
-  top: -23px;
-  left: 10px;
-  height: 0px;
-  width: 0px;
+@media (max-width: 299px) {
+  .category-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .category-image {
+    width: 150px;
+    height: 150px;
+  }
+  .text-block {
+    font-size: 20px;
+  }
 }
 
-
-#cartPreview div .arrow {
-  visibility: hidden;
+@media (min-width: 300px) {
+  .category-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .category-image {
+    width: 200px;
+    height: 200px;
+  }
+  .text-block {
+    font-size: 20px;
+  }
 }
 
-#cartPreview {
-  position: relative;
-  width: 300px;
-  height: auto;
+@media (min-width: 500px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category-image {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-#cartPreviewDisplay {
-  border: 2px solid #6c757d;
-  width: auto;
-  height: auto;
+@media (min-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .category-image {
+    width: 210px;
+    height: 210px;
+  }
+  .text-block {
+    left: 35%;
+    font-size: 20px;
+  }
 }
 
-#cartBookPreviewContents {
-  height: 230px;
-  word-break: break-word;
-  overflow-y: auto;
+@media (min-width: 991px) {
+  .category-image {
+    width: 250px;
+    height: 250px;
+  }
+  .text-block {
+    font-size: 25px;
+  }
 }
 
-.divider {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-top: 1px solid;
+@media (min-width: 1150px) {
+  .category-image {
+    width: 275px;
+    height: 275px;
+  }
 }
 
-#cartShortCutLink:hover {
-  text-decoration: none;
+@media (min-width: 1200px) {
+  .category-image {
+    width: 300px;
+    height: 300px;
+  }
 }
 
-#sideNav {
+@media (min-width: 1300px) {
+  .category-image {
+    width: 325px;
+    height: 325px;
+  }
+}
+
+.text-block {
+  position: absolute;
+  padding: 5px;
+  background-color: #e6f5ff;
+  color: black;
+  top: 40%;
+  left: 30%;
+}
+
+/* Side Nav */
+
+#sidenav {
   position: absolute;
   top: 285px;
   left: 25px;
   width: 0;
 }
 
-#sideNav:hover {
+#sidenav:hover {
   text-decoration: none;
+}
+
+/* Books */
+
+#searchForm {
+  max-width: 200px;
+  height: 36.5px;
 }
 
 #book-container {
@@ -138,6 +192,82 @@
 .book-category:hover {
   text-decoration: none;
   color: black;
+}
+
+.span {
+  color: black;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.showBookImage {
+  display: block;
+  margin-left: 27%;
+  width: 50%;
+}
+
+.card-body-wrapper {
+  position: absolute;
+  top: 200px;
+}
+
+/* Cart */
+
+#cart-button-image {
+  position: relative;
+  width: 33px;
+  height: 33px;
+}
+
+#cart-quantity-number {
+  font-size: 14px;
+  position: relative;
+  top: -23px;
+  left: 10px;
+  height: 0px;
+  width: 0px;
+}
+
+#cart-preview div .arrow {
+  visibility: hidden;
+}
+
+#cart-preview {
+  position: relative;
+  width: 300px;
+  height: auto;
+}
+
+#cart-preview-display {
+  border: 2px solid #6c757d;
+  width: auto;
+  height: auto;
+}
+
+#cart-book-preview-contents {
+  height: 230px;
+  word-break: break-word;
+  overflow-y: auto;
+}
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid;
+}
+
+#cart-shortcut-link:hover {
+  text-decoration: none;
 }
 
 .cart-total {
@@ -160,127 +290,8 @@
   margin-top: 100px;
 }
 
-.span {
-  color: black;
-  font-size: 20px;
-  margin-left: 30px;
-}
-
-.showBookImage {
-  display: block;
-  margin-left: 27%;
-  width: 50%;
-}
-
-.category-grid {
-  display: grid;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 20px;
-  max-width: 1100px;
-}
-
-.text-block {
-  position: absolute;
-  padding: 5px;
-  background-color: #e6f5ff;
-  color: black;
-  top: 40%;
-  left: 30%;
-}
-
-@media(max-width: 299px) {
-  .category-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .category-image {
-    width: 150px;
-    height: 150px;
-  }
-  .text-block {
-    font-size: 20px;
-  }
-}
-
-@media(min-width: 300px) {
-  .category-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .category-image {
-    width: 200px;
-    height: 200px;
-  }
-  .text-block {
-    font-size: 20px;
-  }
-}
-
-@media(min-width: 500px) {
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .category-image {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media(min-width: 768px) {
-  .category-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .category-image {
-    width: 210px;
-    height: 210px;
-  }
-  .text-block {
-    left: 35%;
-    font-size: 20px;
-  }
-}
-
-@media(min-width: 991px) {
-  .category-image {
-    width: 250px;
-    height: 250px;
-  }
-  .text-block {
-    font-size: 25px;
-  }
-}
-
-@media(min-width: 1150px) {
-  .category-image {
-    width: 275px;
-    height: 275px;
-  }
-}
-
-@media(min-width: 1200px) {
-  .category-image {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media(min-width: 1300px) {
-  .category-image {
-    width: 325px;
-    height: 325px;
-  }
-}
-
-#searchForm {
-  max-width: 200px;
-  padding-bottom: 5px;
-  height: 36.5px;
-}
-
-@media(max-width: 700px) {
-  #minusButton {
+@media (max-width: 700px) {
+  #minus-button {
     margin-left: -10px
   }
 }
