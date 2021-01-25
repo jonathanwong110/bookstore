@@ -19,11 +19,11 @@ export default function CartBook(props) {
         ${cartBook.price}.00
       </td>
       <td>
-        <Button variant="secondary" size="sm" id="minus-button" onClick={() => props.removeFromCart(cartBook)} style={{ marginRight: "5px" }}>
+        <Button variant="secondary" size="sm" onClick={() => props.removeFromCart(cartBook)} style={{ marginRight: "5px" }}>
           -
         </Button>
-        <strong style={{ fontWeight: "500" }} id="cartBookQuantity">[{cartBook.quantity}]</strong>
-        <Button variant="secondary" size="sm" id="plusButton" onClick={() => props.addToCart(cartBook)} style={{ marginLeft: "5px" }}>
+        <strong style={{ fontWeight: "500" }} >[{cartBook.quantity}]</strong>
+        <Button variant="secondary" size="sm" id="plus-button" onClick={() => props.addToCart(cartBook)} style={{ marginLeft: "5px" }}>
           +
         </Button>
       </td>

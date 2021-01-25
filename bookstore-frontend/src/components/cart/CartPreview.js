@@ -18,7 +18,7 @@ export default function CartPreview(props) {
   return (
     <>
       <div className="span">
-        <Button variant="flat" ref={target} onClick={() => setShow(!show)}>
+        <Button variant="flat" id="cart-preview-button" ref={target} onClick={() => setShow(!show)}>
           <Image id="cart-button-image" src="https://www.jing.fm/clipimg/full/89-896459_shopping-bag-clipart-icon-transparent-shopping-bag-png.png" />
           <div id="cart-quantity-number">
             {arrSum(cart.map(cartBook => cartBook.quantity))}

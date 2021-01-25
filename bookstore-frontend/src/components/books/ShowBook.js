@@ -38,14 +38,13 @@ function DisplayBook(props) {
           <br></br>
           <p>{books.book.description}</p>
           <h3>Reviews: </h3>
+          <br></br>
           {books.book.reviews && books.book.reviews.length > 0 ?
             books.book.reviews.map(review => {
               return (
-                <ul key={review.id}>
-                  <li>
-                    {review.content}
-                  </li>
-                </ul>
+                <div key={review.id}>
+                  {review.content}
+                </div>
               )
             })
             :
@@ -60,7 +59,7 @@ function DisplayBook(props) {
           <Button variant="dark" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="secondary" onClick={handleAdd}>
+          <Button variant="primary" onClick={handleAdd}>
             Add to Cart
           </Button>
         </Modal.Footer>

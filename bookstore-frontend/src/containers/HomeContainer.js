@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-function HomeContainer(props) {
+export default function HomeContainer(props) {
 
   return (
     <div className="category-navigation">
@@ -38,5 +38,3 @@ function HomeContainer(props) {
     </div>
   )
 }
-
-export default HomeContainer
