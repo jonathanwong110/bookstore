@@ -19,11 +19,11 @@ export default function CartBook(props) {
         ${cartBook.price}.00
       </td>
       <td>
-        <Button variant="secondary" size="sm" onClick={() => props.removeFromCart(cartBook)} style={{ marginRight: "5px" }}>
+        <Button variant="secondary" size="sm" className="minus-button" onClick={() => props.removeFromCart(cartBook)} style={{ marginRight: "5px" }}>
           -
         </Button>
         <strong style={{ fontWeight: "500" }} >[{cartBook.quantity}]</strong>
-        <Button variant="secondary" size="sm" id="plus-button" onClick={() => props.addToCart(cartBook)} style={{ marginLeft: "5px" }}>
+        <Button variant="secondary" size="sm" className="plus-button" onClick={() => props.addToCart(cartBook)} style={{ marginLeft: "5px" }}>
           +
         </Button>
       </td>
@@ -31,7 +31,7 @@ export default function CartBook(props) {
         ${cartBook.price * cartBook.quantity}.00
       </td>
       <td>
-        <Button variant="secondary" size="sm" onClick={() => props.clearBookFromCart(cartBook)}>
+        <Button variant="secondary" size="sm" className="remove-button" onClick={() => props.clearBookFromCart(cartBook)}>
           X
         </Button>
       </td>

@@ -10,12 +10,12 @@ class MainNav extends Component {
 
     return (
       <>
-        <Navbar bg="secondary" fixed="top">
+        <Navbar bg="secondary" fixed="top" id="main-nav">
           <Link to="/" className="logo">BookStore</Link>
           <Nav className="mr-auto"></Nav>
           <Nav>
-            <Link to="/" className="span" style={{ position: "relative", top: "10px" }}> Directory </Link>
-            <Link to="/books" className="span" style={{ position: "relative", top: "10px" }}> Shop </Link>
+            <Link to="/" className="main-nav-right-items" style={{ right: "20px" }}> Directory </Link>
+            <Link to="/books" className="main-nav-right-items" style={{ right: "16px" }}> Shop </Link>
             <CartPreview cart={this.props.cart} history={this.props.history} />
           </Nav>
         </Navbar>

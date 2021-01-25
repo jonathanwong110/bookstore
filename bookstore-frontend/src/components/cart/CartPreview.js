@@ -17,7 +17,7 @@ export default function CartPreview(props) {
 
   return (
     <>
-      <div className="span">
+      <div className="main-nav-right-items" style={{ top: "-1px", right: "10px"}}>
         <Button variant="flat" id="cart-preview-button" ref={target} onClick={() => setShow(!show)}>
           <Image id="cart-button-image" src="https://www.jing.fm/clipimg/full/89-896459_shopping-bag-clipart-icon-transparent-shopping-bag-png.png" />
           <div id="cart-quantity-number">
@@ -39,7 +39,7 @@ export default function CartPreview(props) {
                               <Image src={cartBook.image} height="100" width="66px" />
                               <br></br>
                               <br></br>
-                              <div style={{ fontSize: "17px", wordBreak: "break-word" }}>{cartBook.title}</div>
+                              <div style={{ fontSize: "17px", wordBreak: "break-word", marginRight: "15px", marginBottom: "3px" }}>{cartBook.title}</div>
                               <div style={{ fontSize: "15px" }}>{cartBook.quantity} * ${cartBook.price}.00 = ${cartBook.price * cartBook.quantity}.00</div>
                               <br></br>
                             </div>
@@ -52,7 +52,7 @@ export default function CartPreview(props) {
                       Total ({arrSum(cart.map(cartBook => cartBook.quantity))} Items): ${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
                     </div>
                     <br></br>
-                    <Button variant="secondary" style={{ width: "100%", marginBottom: "5px" }} onClick={handleClick}>
+                    <Button variant="secondary" id="view-cart-button" onClick={handleClick}>
                       <Link to="/cart" id="cart-shortcut-link" style={{ color: "white" }}>View Cart</Link>
                     </Button>
                   </Popover.Content>

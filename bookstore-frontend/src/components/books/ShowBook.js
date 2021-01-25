@@ -18,14 +18,24 @@ function DisplayBook(props) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow} style={{ fontSize: "15px", width: "90px", position: "relative", bottom: "10px" }}>
+      <Button
+        variant="secondary"
+        onClick={handleShow}
+        className="book-more-details-button">
         Details
       </Button>
-      <Modal show={show} onHide={handleClose} animation={false}>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>
             <img
-              alt={books.book.id} src={books.book.image} height="300px" width="200px" className="showBookImage">
+              alt={books.book.id}
+              src={books.book.image}
+              height="300px"
+              width="200px"
+              className="show-book-image">
             </img>
           </Modal.Title>
         </Modal.Header>
