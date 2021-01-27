@@ -8,7 +8,7 @@ export default function Book(props) {
   if (!book) return null
 
   return (
-    <Card style={{ width: '210px', height: '375px', margin: '15px' }}>
+    <Card className="individual-book-wrapper">
       <Card.Img variant="top" src={book.image} height="200px" width="200px" />
       <Card.Body className="card-body-wrapper">
         <Card.Text className="title">{book.title}</Card.Text>

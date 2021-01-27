@@ -40,11 +40,19 @@ function DisplayBook(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h2 style={{ textAlign: "center" }}> {books.book.title} </h2>
-          <p style={{ textAlign: "center" }}> by </p>
-          <h6 style={{ textAlign: "center" }}>{books.book.author}</h6>
+          <h2>
+            {books.book.title}
+          </h2>
+          <p>
+            by
+          </p>
+          <h6>
+            {books.book.author}
+          </h6>
           <br></br>
-          <h4 style={{ textAlign: "center" }}>${books.book.price}.00</h4>
+          <h4>
+            ${books.book.price}.00
+          </h4>
           <br></br>
           <p>{books.book.description}</p>
           <h3>Reviews: </h3>
@@ -66,10 +74,10 @@ function DisplayBook(props) {
           }
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
+          <Button variant="dark" className="close-button" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleAdd}>
+          <Button variant="primary" className="add-to-cart-button" onClick={handleAdd}>
             Add to Cart
           </Button>
         </Modal.Footer>

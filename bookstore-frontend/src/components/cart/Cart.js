@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Button } from 'react-bootstrap';
+import { Table, Button, Container, Row, Col } from 'react-bootstrap';
 import CartBook from './CartBook'
 import CheckOut from './CheckOut'
 
@@ -13,9 +13,6 @@ export default function Cart(props) {
       <div style={{ marginLeft: "20px", marginBottom: "20px", fontSize: "25px", fontWeight: "500" }}>
         Shopping Cart
       </div>
-      <div style={{ marginLeft: "20px", marginBottom: "20px", fontSize: "20px", fontWeight: "400" }}>
-        {arrSum(cart.map(cartBook => cartBook.quantity))} Item(s)
-        </div>
       <Table>
         <thead>
           <tr style={{ textAlign: "center" }}>
@@ -37,13 +34,19 @@ export default function Cart(props) {
         </tbody>
       </Table>
       <br></br>
-      <br></br>
+      <Container fluid="sm" className="cart-total-info-wrapper">
+        <Row>
+          <Col className="cart-total-left-col" style={{ borderBottom: "1px solid #b3b3b3" }}>Order Summary</Col>
+          <Col className="cart-total-right-col" style={{ borderBottom: "1px solid #b3b3b3" }}>{arrSum(cart.map(cartBook => cartBook.quantity))} Item(s)</Col>
+        </Row>
+        <Row>
+          <Col className="cart-total-left-col">Order Total</Col>
+          <Col className="cart-total-right-col">${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00</Col>
+        </Row>
+      </Container>
       <Button variant="secondary" size="md" className="clear-cart-button" onClick={() => props.clearCart()}>
         Clear Cart
       </Button>
-      <div className="cart-total" style={{ fontWeight: "500" }}>
-        Total: ${arrSum(cart.map(cartBook => cartBook.price * cartBook.quantity))}.00
-      </div>
       <CheckOut cart={props} />
     </>
   )

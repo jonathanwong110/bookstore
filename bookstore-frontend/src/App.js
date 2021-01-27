@@ -22,6 +22,7 @@ class App extends Component {
             <Route exact path="/cart" component={CartContainer} />
             <Route component={NotFound} />
           </Switch>
+          <div style={{ height: "150px", width: "0px" }}></div>
         </div>
       </BrowserRouter>
     )

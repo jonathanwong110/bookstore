@@ -52,14 +52,14 @@ class Books extends Component {
         <div style={{ textAlign: "center", fontSize: "25px" }}>{this.props.filterBy.charAt(0).toUpperCase() + this.props.filterBy.slice(1)} Books </div>
         <br></br>
         <Row>
-          {books.map(book => {
+          {books.length !== 0 ? books.map(book => {
             return this.props.filterBy === "" || book.category === this.props.filterBy ?
               <div style={{ position: "relative", left: "130px", textAlign: "center" }} key={book.id}>
                 <Col key={book.id}>
                   <Book book={book} addToCart={this.props.addToCart} />
                 </Col>
               </div> : null
-          })}
+          }) : <div style={{ marginLeft: "auto", marginRight: "auto" }}>No results found</div>}
         </Row>
       </Container>
     )
